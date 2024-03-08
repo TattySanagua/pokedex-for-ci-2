@@ -17,7 +17,7 @@ jobs:
           access_token: ${{ github.token }}
 
   lint:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -52,7 +52,7 @@ jobs:
 
   test:
     needs: [lint, build]
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
